@@ -1,0 +1,5 @@
+{
+    "require": {
+        "illuminate/html": "^5.0"
+    }
+}
