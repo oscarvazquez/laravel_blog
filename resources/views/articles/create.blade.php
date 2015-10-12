@@ -23,7 +23,11 @@
 			<label><h3>Published On:</h3></label>
 				<input type = "date" name = "published_at" value = "{{Carbon\Carbon::now()->format('Y-m-d')}}" class = "form-control">
 		</div>
+		<div class = 'form-group'>
 			<input type = "submit" value = "Create New Article" class = "btn btn-primary">
 		</div>
 	</form>
+
+	@include ('errors.list')
+
 @stop

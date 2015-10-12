@@ -30,10 +30,21 @@ class ArticlesController extends Controller {
 	{
 		return view('articles.create');
 	}
-	public function store()
+	public function store(Requests\CreateArticle $request)
 	{
-		$input = Request::all();
-		Article::create($input);
+		$article = new Article($request->all());
+		\Auth::user()->articles()->save($article);
+		return redirect('articles');
+	}
+	public function edit($id)
+	{
+		$article = Article::find($id);
+		return view('articles.edit', compact('article', $article));
+	}
+	public function update($id, Requests\CreateArticle $request)
+	{
+		$article = Article::find($id);
+		$article->update(Request::all());
 		return redirect('articles');
 	}
 
