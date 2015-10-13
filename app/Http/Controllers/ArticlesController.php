@@ -9,6 +9,11 @@ use Request;
 
 class ArticlesController extends Controller {
 
+	public function __construct()
+	{
+		$this->middleware('auth', ['only' => 'create']);
+	}
+
 	public function index() 
 	{
 		$article = \App\Article::latest('published_at')->published()->get();
@@ -16,14 +21,8 @@ class ArticlesController extends Controller {
 		return view('articles.index', compact('article'));
 	}
 
-	public function show($id)
+	public function show(Article $article)
 	{
-		$article = \App\Article::find($id);
-
-		if(is_null($article)) {
-			abort(404);
-		}
-
 		return view('articles.show')->with('article', $article);
 	}
 	public function create()
@@ -34,16 +33,15 @@ class ArticlesController extends Controller {
 	{
 		$article = new Article($request->all());
 		\Auth::user()->articles()->save($article);
+		\Session::flash('flash_message', 'Your article has been created!');
 		return redirect('articles');
 	}
-	public function edit($id)
+	public function edit(Article $article)
 	{
-		$article = Article::find($id);
 		return view('articles.edit', compact('article', $article));
 	}
-	public function update($id, Requests\CreateArticle $request)
+	public function update(Article $article, Requests\CreateArticle $request)
 	{
-		$article = Article::find($id);
 		$article->update(Request::all());
 		return redirect('articles');
 	}
