@@ -23,11 +23,30 @@
 			<label><h3>Published On:</h3></label>
 				<input type = "date" name = "published_at" value = "{{Carbon\Carbon::now()->format('Y-m-d')}}" class = "form-control">
 		</div>
+		<div class = "form-group">
+			<label><h3>Categories:</h3></label>
+				<select multiple name = 'cats[]' class = "form-control" id = "select_field">
+					@foreach ($category as $key => $cats)
+							<option value = "{{$key}}">{{$cats}}</option>
+					@endforeach
+				</select>
+		</div>
 		<div class = 'form-group'>
 			<input type = "submit" value = "Create New Article" class = "btn btn-primary">
 		</div>
 	</form>
 
 	@include ('errors.list')
+
+@section('footer')
+	<script>
+		$(document).ready(function(){
+			console.log('doing somethins');
+			$("#select_field").select2({
+				placeholder: "Choose a Category"
+			});
+		})
+	</script>
+@endsection
 
 @stop

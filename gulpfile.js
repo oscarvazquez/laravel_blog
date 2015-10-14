@@ -12,5 +12,17 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.less('app.less');
+    mix.less('app.less', 'resources/css');
+
+    mix.styles([
+    	'libs/bootstrap.min.css',
+    	'app.css',
+    	'libs/select2.min.css'
+    ])
+
+    mix.scripts([
+    	'libs/jquery.min.js',
+    	'libs/bootstrap.min.js',
+    	'libs/select2.min.js'
+    ])
 });

@@ -23,7 +23,21 @@
 			<label><h3>Published On:</h3></label>
 			<input type = "date" name = "published_at" value = "{{$article->published_at->format('Y-m-d')}}" class = "form-control">
 		</div>
+		<div class = "form-group">
+			<label><h3>Categories:</h3></label>
+				<select multiple name = 'cats[]' class = "form-control" id = "select_field">
+					@foreach ($category as $key => $cats)
+						<option value = "{{$key}}">{{$cats}}</option>
+					@endforeach
+				</select>
+		</div>
 		<input type = "submit" value = "Edit Article" class = "btn btn-primary" class = "form-control">
 	</form>
 	@include ('errors.list')
+
+	@section('footer')
+		<script>
+			$('#select_field').select2();
+		</script>
+	@endsection
 @stop

@@ -25,25 +25,53 @@ class ArticlesController extends Controller {
 	{
 		return view('articles.show')->with('article', $article);
 	}
+
 	public function create()
 	{
-		return view('articles.create');
+		$category = \App\Category::lists('name', 'id');
+		return view('articles.create', compact('category', $category));
 	}
+
 	public function store(Requests\CreateArticle $request)
 	{
-		$article = new Article($request->all());
-		\Auth::user()->articles()->save($article);
+		$this->createArticle($request);
 		\Session::flash('flash_message', 'Your article has been created!');
 		return redirect('articles');
 	}
+
 	public function edit(Article $article)
 	{
-		return view('articles.edit', compact('article', $article));
+		$category = \App\Category::lists('name', 'id');
+		return view('articles.edit', compact('article', $article, 'category', $category));
 	}
+
 	public function update(Article $article, Requests\CreateArticle $request)
 	{
 		$article->update(Request::all());
+		$this->syncCategories($article, $request->input('cats'));
 		return redirect('articles');
 	}
 
+
+
+//// private functions Sync categories and creating a brand new article
+
+
+
+
+	private function syncCategories(Article $article, $categories)
+	{
+		$article->categories()->sync($categories);
+	}
+
+	private function createArticle($request) 
+	{
+		$article = \Auth::user()->articles()->create($request->all());
+		
+		$this->syncCategories($article, $request->input('cats'));
+		
+		return $article;
+	}
+
 }
+
