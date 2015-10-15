@@ -11,7 +11,7 @@ class ArticlesController extends Controller {
 
 	public function __construct()
 	{
-		$this->middleware('auth', ['only' => 'create']);
+		$this->middleware('auth', ['only' => 'create', 'only' => 'edit']);
 	}
 
 	public function index() 
@@ -61,6 +61,10 @@ class ArticlesController extends Controller {
 
 	private function syncCategories(Article $article, $categories)
 	{
+		if ($categories == null)
+		{
+			$categories = [];
+		}
 		$article->categories()->sync($categories);
 	}
 

@@ -25,6 +25,11 @@ class RouteServiceProvider extends ServiceProvider {
 		parent::boot($router);
 
 		$router->model('articles', 'App\Article');
+
+		$router->bind('categories', function($name)
+		{
+			return \App\Category::where('name', $name)->firstOrFail();
+		});
 	}
 
 	/**

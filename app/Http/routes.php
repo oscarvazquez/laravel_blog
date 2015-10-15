@@ -17,6 +17,8 @@ Route::get('home', 'HomeController@index');
 
 Route::resource('articles', 'ArticlesController');
 
+Route::get('category/{categories}', 'CategoriesController@show');
+
 
 
 Route::controllers([

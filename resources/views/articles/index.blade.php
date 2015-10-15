@@ -8,7 +8,11 @@
 		<article>
 			<a href = "/articles/{{$art->id}}"><h2>{{$art->title}}</h2></a>
 			<div class = "body">{{$art->body}}</div>
-			<a href = "/articles/{{$art->id}}/edit">Edit Article</a>
+			@if (Auth::guest())
+
+			@else
+				<a href = "/articles/{{$art->id}}/edit">Edit Article</a>
+			@endif
 		</article>
 	@endforeach
 @stop
