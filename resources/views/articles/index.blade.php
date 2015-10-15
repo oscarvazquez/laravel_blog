@@ -12,6 +12,11 @@
 
 			@else
 				<a href = "/articles/{{$art->id}}/edit">Edit Article</a>
+				<form aciton = "/articles/{{$art->id}}/delete>" method = "post">
+					<input type = 'hidden' name = "_token" value = "{{ csrf_token() }}">
+					<input type = "hidden" name = "_method" value = "delete">
+					<input type = "submit" value = "delete" class = "btn btn-danger">
+				</form>
 			@endif
 		</article>
 	@endforeach
