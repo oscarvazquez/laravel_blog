@@ -52,6 +52,13 @@ class ArticlesController extends Controller {
 		return redirect('articles');
 	}
 
+	public function destroy(Article $article)
+	{
+		$article->delete();
+
+		return redirect('articles');
+	}
+
 
 
 //// private functions Sync categories and creating a brand new article

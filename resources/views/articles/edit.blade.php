@@ -5,7 +5,7 @@
 	<h1>Edit Article</h1>
 	</hr>
 	<form action = "/articles/{{$article->id}}" method = "post">
-		<input type = "hidden" name = "_token" value = "{{ csrf_token() }}">
+		<input type = 'hidden' name = "_token" value = "{{ csrf_token() }}">
 		<input type = "hidden" name = "_method" value = "patch">
 		<div class = "form-group">
 			<label><h3>Title:</h3></label>
@@ -17,7 +17,7 @@
 		</div>
 		<div class = "form-group">
 			<label><h3>Body:</h3></label>		
-			<textarea name = "body" value = "{{$article->body}}" class = "form-control">{{$article->body}}</textarea>
+			<textarea id = "body" name = "body" value = "{{$article->body}}" class = "form-control ckeditor">{{$article->body}}</textarea>
 		</div>
 		<div class = "form-group">
 			<label><h3>Published On:</h3></label>
@@ -38,6 +38,13 @@
 	@section('footer')
 		<script>
 			$('#select_field').select2();
+			CKEDITOR.replace( 'body',
+	        {
+	        	customConfig : 'config.js',
+	        	toolbar : 'simple',
+	        	height: 400,
+	        	uiColor: '#343B3D'
+	        })
 		</script>
 	@endsection
 @stop

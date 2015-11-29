@@ -15,7 +15,11 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
 
+Route::get('contact', 'WelcomeController@contact');
+
 Route::resource('articles', 'ArticlesController');
+
+Route::resource('projects', 'ProjectsController');
 
 Route::get('category/{categories}', 'CategoriesController@show');
 

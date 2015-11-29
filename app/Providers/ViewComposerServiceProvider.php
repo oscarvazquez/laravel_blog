@@ -1,6 +1,7 @@
 <?php namespace App\Providers;
 
 use App\Article;
+use App\Category;
 use Illuminate\Support\ServiceProvider;
 
 class ViewComposerServiceProvider extends ServiceProvider {
@@ -13,6 +14,7 @@ class ViewComposerServiceProvider extends ServiceProvider {
 	public function boot()
 	{	
 		$this->ComposedNavigation();
+		$this->ComposedCatNavigation();
 	}
 
 	/**
@@ -30,6 +32,13 @@ class ViewComposerServiceProvider extends ServiceProvider {
 		view()->composer('partials.nav', function($view)
 		{
 			$view->with('latest', Article::latest()->first());
+		});
+	}
+	private function ComposedCatNavigation()
+	{
+		view()->composer('partials.nav_cat', function($view)
+		{
+			$view->with('categories', Category::all());
 		});
 	}
 

@@ -3,6 +3,7 @@
 @section('content')
 
 	<h1>Write a New Article</h1>
+	
 	<hr/>
 
 	<form action = "/articles" method = "post">
@@ -17,7 +18,7 @@
 		</div>
 		<div class = "form-group">
 			<label><h3>Body:</h3></label>
-				<textarea name = "body" class = "form-control"></textarea>
+				<textarea id = 'body' name = "body" class = "form-control ckeditor"></textarea>
 		</div>
 		<div class = "form-group">
 			<label><h3>Published On:</h3></label>
@@ -39,12 +40,21 @@
 	@include ('errors.list')
 
 @section('footer')
+
 	<script>
 		$(document).ready(function(){
 			console.log('doing somethins');
 			$("#select_field").select2({
 				placeholder: "Choose a Category"
 			});
+
+			CKEDITOR.replace( 'body',
+	        {
+	        	customConfig : 'config.js',
+	        	toolbar : 'simple',
+	        	height: 400,
+	        })
+	        hljs.initHighlightingOnLoad();
 		})
 	</script>
 @endsection

@@ -1,0 +1,34 @@
+@extends('app')
+
+@section('content')
+	
+	<h1>Create a New Project</h1>
+
+	<hr/>
+
+	<form action = "/projects" method = "post">
+		<input type = "hidden" name = "_token" value = "{{ csrf_token() }}">
+		<div class = "form-group">
+			<label><h3>Title:</h3></label>
+				<input type = "text" name = "title" class = "form-control">
+		</div>
+		<div class = "form-group">
+			<label><h3>Description</h3></label>
+				<input type = 'text' name = "description" class = 'form-control'>
+		</div>
+		<div class = "form-group">
+			<label><h3>Body</h3></label>
+			<textarea name = 'body' class = "form-control"></textarea>
+		</div>
+		<div class = "form-group">
+			<label><h3>Published On:</h3></label>
+				<input type = "date" name = 'published_at'>
+		</div>
+			image<input type = 'text' name = "image">
+			video<input type = "text" name = 'video'>
+		<div class = "form-group">
+			<input type = 'submit'value = "Create a New Project" class = "btn btn-primary">
+		</div>
+	</form>
+
+@stop
