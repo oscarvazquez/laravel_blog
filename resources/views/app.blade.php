@@ -10,6 +10,7 @@
 
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.11.0/bootstrap-social.css" rel = "stylesheet" type = "text/css">
 	<link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
 	<link href="/js/ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet">
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel = "stylesheet">
@@ -38,7 +39,8 @@
 		/* this is the background color */
 		.wrapper{
 			background-color: #fffce5 !important;
-			height: 1000px;
+			height:auto;
+			min-height: 100vh;
 			padding: 20px;
 		}
 		/* this is the navbar color */
@@ -75,19 +77,54 @@
 			font-size: 22px;
 			color: white !important;
 		}
+		.more_nav{
+			position: fixed;
+			top: 15%;
+			color: #DC3522;
+			right: 0; 
+		}
+		.cat_tag{
+			color: #DC3522;
+			font-size: 20px;
+			text-align: left;
+			font-weight: bold;
+		}
+		.title_tag {
+			color: #2F343B;
+			font-size: 26px;
+			text-align: right;
+			font-weight: bold;
+		}
+		.inner-section{
+			margin-top: 100px;
+		}
+		.quote{
+			font-style: italic;
+			font-size: 20;
+			margin-bottom: 10px;
+		}
+		.color_white_link{
+			color: #F3FFE2 !important;
+			margin-top: 8px;
+		}
+		.final_link{
+			margin-right: 15px;
+		}
 	</style>
 </head>
 <body>
 	@include('partials.nav')
 	<div class = "wrapper">
 		<div class = "container">
-			@if (Session::has('flash_message'))
-				<div class = "alert alert-success">
-					<button type = "button" class = "close" data-dismiss="alert" aria-hidden="true">&times;</button>
-					{{ Session::get('flash_message') }}
-				</div>
-			@endif
-			@yield('content')
+			<div class = "inner-section">
+				@if (Session::has('flash_message'))
+					<div class = "alert alert-success">
+						<button type = "button" class = "close" data-dismiss="alert" aria-hidden="true">&times;</button>
+						{{ Session::get('flash_message') }}
+					</div>
+				@endif
+				@yield('content')
+			</div>
 		</div>
 	</div>
 

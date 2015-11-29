@@ -1,5 +1,5 @@
 <div class 'nav_star'>
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -27,6 +27,15 @@
 
 				<ul class="nav navbar-nav navbar-right something">
 					@if (Auth::guest())
+						<li><a href = "https://www.linkedin.com/in/oscar-vazquez-1baaa980" class="btn btn-social-icon btn-linkedin color_white_link">
+	   						<span class="fa fa-linkedin"></span>
+	  					</a></li>
+	  					<li><a href="https://github.com/oscarvazquez" class="btn btn-social-icon btn-facebook color_white_link">
+	   						<span class="fa fa-facebook"></span>
+	  					</a></li>
+						<li><a href="https://github.com/oscarvazquez" class="btn btn-social-icon btn-github color_white_link final_link">
+	   						<span class="fa fa-github"></span>
+	  					</a></li>
 						<li><a class = "color_white" href="{{ url('/auth/login') }}">Login</a></li>
 					@else
 						<li class="dropdown">

@@ -2,6 +2,7 @@
 
 @section('content')
 	<h2>Projects</h2>
+	<hr/>
 	@foreach ($project as $pro)
 		<article>
 			<a class = "link_tag" href = "/projects/{{$pro->id}}"><h2>{{$pro->title}}</h2></a>
