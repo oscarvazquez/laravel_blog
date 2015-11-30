@@ -23,6 +23,8 @@ Route::resource('projects', 'ProjectsController');
 
 Route::get('category/{categories}', 'CategoriesController@show');
 
+Route::resource('messages', 'MessagesController');
+
 
 
 Route::controllers([

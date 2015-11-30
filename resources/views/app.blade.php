@@ -23,6 +23,10 @@
 		nav {
 			margin-bottom: 0px !important;
 		}
+		.small_div{
+			overflow: hidden;
+			width: 200px;
+		}
 		.nav_mid {
 		  display: inline-block !important;
 		  float: none !important;
@@ -63,7 +67,7 @@
 		/* this is the project and aritcles link color */
 		.link_tag{
 			color: #DC3522;
-			width: 45px !important;
+			width: 2000px !important;
 		}
 		/* this is the categories color */
 		.cat_nav{
@@ -88,12 +92,16 @@
 			font-size: 20px;
 			text-align: left;
 			font-weight: bold;
+			text-transform: uppercase;
 		}
 		.title_tag {
 			color: #2F343B;
 			font-size: 26px;
 			text-align: right;
 			font-weight: bold;
+		}
+		.tag_center_align{
+			text-align: center !important;
 		}
 		.inner-section{
 			margin-top: 100px;
@@ -110,6 +118,17 @@
 		.final_link{
 			margin-right: 15px;
 		}
+		.small_cat_nav{
+			text-align: center;
+		}
+		#bs-example-navbar-collapse-1{
+			font-size: 20px !important;
+			background-color: #2F343B !important;
+			text-align: center;
+		}
+		.center_icons{
+			display: inline-block !important;
+		}
 	</style>
 </head>
 <body>
@@ -118,9 +137,13 @@
 		<div class = "container">
 			<div class = "inner-section">
 				@if (Session::has('flash_message'))
-					<div class = "alert alert-success">
-						<button type = "button" class = "close" data-dismiss="alert" aria-hidden="true">&times;</button>
-						{{ Session::get('flash_message') }}
+					<div class = "row">
+						<div class = 'col-lg-8 col-md-4 col-sm-12'>
+							<div class = "alert alert-success">
+								<button type = "button" class = "close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								{{ Session::get('flash_message') }}
+							</div>
+						</div>
 					</div>
 				@endif
 				@yield('content')
@@ -140,6 +163,33 @@
 			}, function(){
 				$(this).removeClass('bigger')
 			})
+
+
+			var $window = $(window);
+
+			        // Function to handle changes to style classes based on window width
+			function checkWidth() {
+			    if ($window.width() < 600) {
+			    	console.log('smaller')
+			        $('#category_navigation').removeClass('more_nav').addClass('col-lg-12 small_cat_nav');
+			        $('.grab_cat').addClass('tag_center_align');
+			        $('.icons').addClass('center_icons');
+			    };
+
+			    if ($window.width() >= 600) {
+			        console.log('bigger')
+			        $('#category_navigation').removeClass('col-lg-12').addClass('more_nav');
+			        $('.grab_cat').removeClass('tag_center_align');
+			        $(".icons").removeClass('center_icons');
+
+			    }
+			}
+
+			    // Execute on load
+			    checkWidth();
+
+			    // Bind event listener
+        $(window).resize(checkWidth);
 		})
 	</script>
 

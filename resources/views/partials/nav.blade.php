@@ -22,18 +22,18 @@
 						<li><a class = "color_white" href="/articles/create">Create Article</a></li>
 						<li><a class = "color_white" href="/projects/create">Create Project</a></li>
 					@endif
-					<li><a class = "color_white" href="/articles/{{$latest->id}}">{{$latest->title}}</a></li>
+<!-- 					<li><a class = "color_white" href="/articles/{{$latest->id}}">{{$latest->title}}</a></li> -->
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right something">
 					@if (Auth::guest())
-						<li><a href = "https://www.linkedin.com/in/oscar-vazquez-1baaa980" class="btn btn-social-icon btn-linkedin color_white_link">
+						<li class = "icons"><a href = "https://www.linkedin.com/in/oscar-vazquez-1baaa980" class="btn btn-social-icon btn-linkedin color_white_link">
 	   						<span class="fa fa-linkedin"></span>
 	  					</a></li>
-	  					<li><a href="https://github.com/oscarvazquez" class="btn btn-social-icon btn-facebook color_white_link">
+	  					<li class = "icons"><a href="https://github.com/oscarvazquez" class="btn btn-social-icon btn-facebook color_white_link">
 	   						<span class="fa fa-facebook"></span>
 	  					</a></li>
-						<li><a href="https://github.com/oscarvazquez" class="btn btn-social-icon btn-github color_white_link final_link">
+						<li class = "icons"><a href="https://github.com/oscarvazquez" class="btn btn-social-icon btn-github color_white_link final_link">
 	   						<span class="fa fa-github"></span>
 	  					</a></li>
 						<li><a class = "color_white" href="{{ url('/auth/login') }}">Login</a></li>

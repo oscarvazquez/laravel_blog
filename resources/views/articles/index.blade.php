@@ -7,9 +7,9 @@
 	<h1>Articles</h1>
 	<hr/>
 	@foreach ($article as $art)
-		<div class = "col-lg-7">
+		<div class = "small_div">
 			<article>
-				<a class = "link_tag" href = "/articles/{{$art->id}}"><h2>{{$art->title}}</h2></a>
+				<h2><a class = "link_tag" href = "/articles/{{$art->id}}">{{$art->title}}</a></h2>
 				<div class = "body">
 					<h4>{{$art->exerpt}}</h4>
 				</div>

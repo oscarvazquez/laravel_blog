@@ -28,6 +28,8 @@ class RouteServiceProvider extends ServiceProvider {
 
 		$router->model('projects', 'App\Project');
 
+		$router->model('messages', 'App\Message');
+
 		$router->bind('categories', function($name)
 		{
 			return \App\Category::where('name', $name)->firstOrFail();
