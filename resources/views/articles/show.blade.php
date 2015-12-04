@@ -4,22 +4,27 @@
 <?php 
 	$art = html_entity_decode($article->body);
 ?>
-<div class = "col-lg-10 col-lg-offset-1">
-	<h1>{{$article->title}}</h1>
-	<hr/>
-		<article>
-			<p>{{$article->published_at}}</p>
-			<div class = "body"><?= $art ?></div>
-		</article>
-	@unless ($article->categories->isEmpty())
-		<h5>Category</h5>
-		<ul>
-			@foreach ($article->categories as $cat)
-				<li>{{$cat->name}}</li>
-			@endforeach
-		</ul>
-	@endunless	
-</div>
+	<div class = "container-fluid">
+		<div class = "col-lg-2 col-md-3 col-sm-4 col-xs-12">
+			@include('partials.nav_cat')
+		</div>
+		<div class = "col-lg-10 col-md-9 col-sm-8 col-xs-12">
+			<h1>{{$article->title}}</h1>
+			<hr/>
+				<article>
+					<p>{{$article->published_at}}</p>
+					<div class = "body"><?= $art ?></div>
+				</article>
+			@unless ($article->categories->isEmpty())
+				<h5>Category</h5>
+				<ul>
+					@foreach ($article->categories as $cat)
+						<li>{{$cat->name}}</li>
+					@endforeach
+				</ul>
+			@endunless	
+		</div>
+	</div>
 
 @stop
 

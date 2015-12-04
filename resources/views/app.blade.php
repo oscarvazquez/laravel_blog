@@ -14,7 +14,6 @@
 	<link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
 	<link href="/js/ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet">
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel = "stylesheet">
-	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=js&skin=desert"></script>	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -25,7 +24,7 @@
 		}
 		.small_div{
 			overflow: hidden;
-			width: 200px;
+			width: 500px;
 		}
 		.nav_mid {
 		  display: inline-block !important;
@@ -42,10 +41,10 @@
 		}
 		/* this is the background color */
 		.wrapper{
-			background-color: #fffce5 !important;
+			background-color: #FFF8E3 !important;
 			height:auto;
 			min-height: 100vh;
-			padding: 20px;
+			padding: 10px;
 		}
 		/* this is the navbar color */
 		.navbar{
@@ -58,7 +57,7 @@
 			font-size: 30px !important;
 			margin-top: 20px;
 			font-weight: bold;
-			color: #E3CDA4 !important;
+			color: #DB4105 !important;
 		}
 		/* this is the navbar color */
 		.color_white{
@@ -66,29 +65,30 @@
 		}
 		/* this is the project and aritcles link color */
 		.link_tag{
-			color: #DC3522;
+			color: #DB4105;
 			width: 2000px !important;
 		}
 		/* this is the categories color */
 		.cat_nav{
 			font-size: 20px;
 			font-weight: bold;
-			color: #DC3522;
+			color: #DB4105;
 		}
 		/* this is the hover navbar color */
 		.bigger{
 			opacity: .8;
 			font-size: 22px;
-			color: white !important;
+			color: #DB4105 !important;
 		}
-		.more_nav{
+/*		.more_nav{
 			position: fixed;
 			top: 15%;
 			color: #DC3522;
-			right: 0; 
-		}
+			left: 0; 
+			background-color: 
+		}*/
 		.cat_tag{
-			color: #DC3522;
+			color: #DB4105;
 			font-size: 20px;
 			text-align: left;
 			font-weight: bold;
@@ -129,7 +129,39 @@
 		.center_icons{
 			display: inline-block !important;
 		}
-	</style>
+/*alksjfd
+	THIS IS GOING TO BE ALL THE CSS FOR THE SIDE NAV BAR 
+	////////////////////////////////////////////////////	\
+	ONLY USED ON THE ARTICLES PAGE FOR TEH CATEGORIES 
+	OF ALL THE DIFFERENT ALSJDFLKJASLFD/////////////////
+*/	
+
+
+
+/*	
+	THIS IS GOING TO BE ALL THE CSS FOR THE SIDE NAV BAR 
+	////////////////////////////////////////////////////	\
+	ONLY USED ON THE ARTICLES PAGE FOR TEH CATEGORIES 
+	OF ALL THE DIFFERENT ALSJDFLKJASLFD/////////////////
+*/	
+@font-face {  
+    font-family: 'BebasRegular';  
+    src: url('font/BEBAS___-webfont.eot');  
+    src: url('font/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),     
+    url('font/BEBAS___-webfont.woff') format('woff'),     
+    url('font/BEBAS___-webfont.ttf') format('truetype'),     
+    url('font/BEBAS___-webfont.svg#BebasRegular') format('svg');  
+    font-weight: normal;  
+    font-style: normal;  
+    }  
+     
+html,body{ 
+    font-family: 'BebasRegular';    
+    width:100%;     
+    height:100%;  
+}
+
+</style>
 </head>
 <body>
 	@include('partials.nav')
@@ -148,48 +180,24 @@
 				@endif
 				@yield('content')
 			</div>
-		</div>
-	</div>
+<!-- 		</div>
+ -->	</div>
 
 	<!-- Scripts -->
 	<script src="/js/all.js"></script>
 	<script src="/js/ckeditor/ckeditor.js"></script>
 	<script src="/js/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
+	<sript src ="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=js&skin=desert"></script>	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
 	@yield('footer')
-		<script>
+	<script>
 		$(document).ready(function(){
 			$('.color_white').hover(function(){
 				$(this).addClass('bigger')
 			}, function(){
 				$(this).removeClass('bigger')
 			})
-
-
-			var $window = $(window);
-
-			        // Function to handle changes to style classes based on window width
-			function checkWidth() {
-			    if ($window.width() < 600) {
-			    	console.log('smaller')
-			        $('#category_navigation').removeClass('more_nav').addClass('col-lg-12 small_cat_nav');
-			        $('.grab_cat').addClass('tag_center_align');
-			        $('.icons').addClass('center_icons');
-			    };
-
-			    if ($window.width() >= 600) {
-			        console.log('bigger')
-			        $('#category_navigation').removeClass('col-lg-12').addClass('more_nav');
-			        $('.grab_cat').removeClass('tag_center_align');
-			        $(".icons").removeClass('center_icons');
-
-			    }
-			}
-
-			    // Execute on load
-			    checkWidth();
-
-			    // Bind event listener
-        $(window).resize(checkWidth);
 		})
 	</script>
 
