@@ -23,7 +23,6 @@
 						<li><a class = "color_white" href="/projects/create">Create Project</a></li>
 						<li><a class = "color_white" href="/messages">Messages</a></li>
 					@endif
-<!-- 					<li><a class = "color_white" href="/articles/{{$latest->id}}">{{$latest->title}}</a></li> -->
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right something">
