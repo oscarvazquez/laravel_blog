@@ -1,4 +1,8 @@
 <?php
+if (isset($_SERVER["REDIRECT_REMOTE_AUTHORIZATION"]) && $_SERVER["REDIRECT_REMOTE_AUTHORIZATION"] != '') {
+  $d = base64_decode($_SERVER["REDIRECT_REMOTE_AUTHORIZATION"]);
+  list($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']) = explode(':', $d);
+}
 /**
  * Laravel - A PHP Framework For Web Artisans
  *
