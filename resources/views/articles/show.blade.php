@@ -4,11 +4,20 @@
 <?php 
 	$art = html_entity_decode($article->body);
 ?>
+<style type="text/css">
+	p {
+		font-size: 24px;
+	}
+	.body{
+		    text-align: justify;
+    		
+	}
+</style>
 	<div class = "container-fluid">
 		<div class = "col-lg-2 col-md-3 col-sm-4 col-xs-12">
 			@include('partials.nav_cat')
 		</div>
-		<div class = "col-lg-10 col-md-9 col-sm-8 col-xs-12">
+		<div class = "col-lg-9 col-md-8 col-sm-7 col-xs-12">
 			<h1>{{$article->title}}</h1>
 			<hr/>
 				<article>
