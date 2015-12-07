@@ -2,6 +2,11 @@
 	.onClickDown{
 		background-color: white !important;
 	}
+	@media (max-width: 765px) {
+		.icons{
+			display: inline-block !important;
+		}
+	}
 </style>
 <div class 'nav_star'>
 	<nav class="navbar navbar-default navbar-fixed-top">
