@@ -144,7 +144,7 @@
 	ONLY USED ON THE ARTICLES PAGE FOR TEH CATEGORIES 
 	OF ALL THE DIFFERENT ALSJDFLKJASLFD/////////////////
 */	
-@font-face {  
+/*@font-face {  
     font-family: 'BebasRegular';  
     src: url('font/BEBAS___-webfont.eot');  
     src: url('font/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),     
@@ -159,7 +159,7 @@ html,body{
     font-family: 'BebasRegular';    
     width:100%;     
     height:100%;  
-}
+}*/
 
 </style>
 </head>
