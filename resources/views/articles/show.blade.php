@@ -12,6 +12,9 @@
 		    text-align: justify;
     		
 	}
+	#disqus_thread{
+		margin-top: 65px;
+	}
 </style>
 	<div class = "container-fluid">
 		<div class = "col-lg-2 col-md-3 col-sm-4 col-xs-12">

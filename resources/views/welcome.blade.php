@@ -21,7 +21,7 @@
 		color: white;
 	}
 	#title1{
-		font-size: 80px;
+		font-size: 60px;
 	}
 	#quote{
 		font-size: 23px;
@@ -58,8 +58,8 @@
  -->	<img src="{{asset('images/background.png')}}" alt="awesome developer" id="awesome_developer" />
 	<div class = "scrollblock" id = "intro1">
 		<div class = "row">
-			<div class = "col-lg-5 col-lg-offset-3 welcome">
-				<h1 id = "title1">Oscar Vazquez</h1>
+			<div class = "col-lg-7 col-lg-offset-2 welcome">
+				<h1 id = "title1">Oscar Vazquez Zweig</h1>
 				<h3>FullStack Developer</h3>
 				<div><h4 id="quote"><?= Inspiring::quote() ?></h4></div>
 			</div>
