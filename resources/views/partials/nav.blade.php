@@ -1,3 +1,8 @@
+<style>
+	.onClickDown{
+		background-color: white !important;
+	}
+</style>
 <div class 'nav_star'>
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">

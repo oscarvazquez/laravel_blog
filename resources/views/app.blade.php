@@ -77,7 +77,7 @@
 		/* this is the hover navbar color */
 		.bigger{
 			opacity: .8;
-			font-size: 22px;
+			border: 1px #DB4105 solid !important;
 			color: #DB4105 !important;
 		}
 /*		.more_nav{
@@ -180,6 +180,15 @@
 				$(this).addClass('bigger')
 			}, function(){
 				$(this).removeClass('bigger')
+			})
+			$('.color_white').mousedown(function(){
+				$(this).addClass('onClickDown')
+				setTimeout(function(){
+				  console.log('in here')
+				  $(this).removeClass('onClickDown')
+				}, 200);
+				// removeClass('onClickDown')
+				console.log('this works')
 			})
 		})
 	</script>
