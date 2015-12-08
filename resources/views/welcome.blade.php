@@ -12,7 +12,7 @@
 	  top: 0; 
 	  left: 0; 
 	  opacity: .8;
-	  max-height: 600px;
+	  max-height: 100vh;
 	  max-width: 100vw;
 	  min-width: 100%;
 	  min-height: 100%;
@@ -21,6 +21,7 @@
 		color: white;
 	}
 	#title1{
+		margin-top: 30px;
 		font-size: 60px;
 	}
 	#quote{
