@@ -30,7 +30,7 @@
 	.scrollblock {
 	    margin: 0;
 	    width: 100%;
-	    height: 600px;
+	    height: 100vw;
 	}
 	.container{
 		margin-top: 100px;
@@ -65,7 +65,7 @@
 			</div>
 		</div>
 	</div>
-	<div class = "scrollblock" id = "intro2">
+<!-- 	<div class = "scrollblock" id = "intro2">
 		<div class = "col-lg-12 welcome full_length">
 			<h1 id = 'title2'>this is the second title</h1>
 		</div>
@@ -74,7 +74,7 @@
 		<div class = "col-lg-5 col-lg-offset-3 welcome">
 			<h1 id = "title3">This is title three</h1>
 		</div>
-	</div>
+	</div> -->
 <!-- </div>
  -->@endsection
 
