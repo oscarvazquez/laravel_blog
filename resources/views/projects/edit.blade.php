@@ -17,7 +17,7 @@
 		</div>
 		<div class = "form-group">
 			<label><h3>Body:</h3></label>		
-			<textarea id = "body" name = "body" value = "{{$project->body}}" class = "form-control ckeditor">{{$article->body}}</textarea>
+			<textarea id = "body" name = "body" value = "{{$project->body}}">{{$project->body}}</textarea>
 		</div>
 		<div class = 'form-group'>
 			<label><h3>image:</h3></label>
