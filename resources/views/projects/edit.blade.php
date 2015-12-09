@@ -16,8 +16,8 @@
 			<input type = 'text' name = 'description' value = "{{$project->description}}" class = "form-control">
 		</div>
 		<div class = "form-group">
-			<label><h3>Body:</h3></label>
-			<input type = "text" name = "body" value = "{{$project->body}}" class = "form-control">
+			<label><h3>Body:</h3></label>		
+			<textarea id = "body" name = "body" value = "{{$project->body}}" class = "form-control ckeditor">{{$article->body}}</textarea>
 		</div>
 		<div class = 'form-group'>
 			<label><h3>image:</h3></label>
@@ -37,4 +37,16 @@
 	</form>
 
 	@include ('errors.list')
+	@section('footer')
+		<script>
+			$('#select_field').select2();
+			CKEDITOR.replace( 'body',
+	        {
+	        	customConfig : 'config.js',
+	        	toolbar : 'simple',
+	        	height: 400,
+	        	uiColor: '#343B3D'
+	        })
+		</script>
+	@endsection
 @stop
