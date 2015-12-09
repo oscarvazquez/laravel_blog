@@ -13,6 +13,10 @@
 				<input type = "text" name = "title" class = "form-control">
 		</div>
 		<div class = "form-group">
+			<label><h3>Story</h3></label>
+				<textarea name = "story" class = 'form-control'></textarea>
+		</div>
+		<div class = "form-group">
 			<label><h3>Description</h3></label>
 				<input type = 'text' name = "description" class = 'form-control'>
 		</div>

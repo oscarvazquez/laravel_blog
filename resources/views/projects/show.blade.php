@@ -13,7 +13,7 @@
 			<hr/>
 				<article>
 					<p>{{$project->published_at}}</p>
-					<div class = "body"><?= $pro ?></div>
+					<div class = "body"><?= html_entity_decode($project->story) ?></div>
 				</article>
 		</div>
 	</div>

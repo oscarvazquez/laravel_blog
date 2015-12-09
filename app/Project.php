@@ -13,7 +13,8 @@ class Project extends Model {
 		'description',
 		'user_id',
 		'image',
-		'video'
+		'video',
+		'story'
 	];
 
 	protected $dates = ['published_at'];

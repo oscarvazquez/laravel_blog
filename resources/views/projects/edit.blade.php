@@ -8,8 +8,12 @@
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">
 		<input type = 'hidden' name = "_method" value = 'patch'>
 		<div class = "form-group">
-			<label><h3>Titie:</h3></label>
+			<label><h3>Title:</h3></label>
 			<input type = "text" name = "title" value = "{{$project->title}}" class = "form-control">
+		</div>
+		<div class = "form-group">
+			<label><h3>Story:</h3></label>
+			<textarea name = "story" value = "{{$project->story}}" class = "form-control">{{$project->story}}</textarea>
 		</div>
 		<div class = "form-group">
 			<label><h3>Description</h3></label>
