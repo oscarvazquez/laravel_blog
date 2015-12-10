@@ -12,7 +12,7 @@
 	  top: 0; 
 	  left: 0; 
 	  opacity: .8;
-	  max-height: 100vh;
+	  max-height: 100vw;
 	  max-width: 100vw;
 	  min-width: 100%;
 	  min-height: 100%;
@@ -31,28 +31,16 @@
 	.scrollblock {
 	    margin: 0;
 	    width: 100%;
-	    height: 100vw;
+	    height: 100%;
 	}
 	.container{
 		margin-top: 100px;
-	}
-	#title2{
-		color: white;
-	}
-	#title3{
-		color:white !important;
 	}
 	.another{
 		background-color: black !important;
 	}
 	#intro3{
 		color: white !important;
-	}
-	.full_length{
-		background-color: #2F343B !important;
-		width: 100% !important;
-		height: 300px;
-		padding: 100px;
 	}
 	.welcome{
 		background-color: rgba(0, 0, 0, 0.2);
