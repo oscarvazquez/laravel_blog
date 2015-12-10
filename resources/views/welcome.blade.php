@@ -54,6 +54,22 @@
 		height: 300px;
 		padding: 100px;
 	}
+	.welcome{
+		background-color: rgba(0, 0, 0, 0.2);
+		border-radius: 25px;
+	}
+	.some_some{
+		color: white !important;
+		margin-right: 20px;
+	}
+	.some_some:hover{
+		color: black !important;
+	}
+	.socials{
+		position: fixed;
+		right: 0 !important;
+		bottom: 0px;
+	}
 </style>
 <!-- <div class = "container">
  -->	<img src="{{asset('images/background.png')}}" alt="awesome developer" id="awesome_developer" />
@@ -66,6 +82,13 @@
 			</div>
 		</div>
 	</div>
+	<div class = "col-lg-12 col-md-12 col-sm-12 socials">
+		<a href="https://github.com/oscarvazquez" class = "some_some"><span class="fa fa-github fa-5x"></span></a>
+		<a href = "https://www.linkedin.com/in/oscar-vazquez-1baaa980" class = "some_some"><span class = "fa fa-linkedin fa-5x"></span></a>
+	  	<a href="https://github.com/oscarvazquez" class = "some_some"><span class="fa fa-facebook fa-5x"></span></a>
+	</div>
+
+
 <!-- 	<div class = "scrollblock" id = "intro2">
 		<div class = "col-lg-12 welcome full_length">
 			<h1 id = 'title2'>this is the second title</h1>

@@ -6,13 +6,22 @@
 		.icons{
 			display: inline-block !important;
 		}
+		.icon-bar{
+			border: 3px solid white;
+			width: 30px !important;
+		}
+		.navbar-toggle{
+			border: 0px solid black !important;
+			margin-top: 25px;
+			background-color: #2F343B !important;
+		}
 	}
 </style>
 <div class 'nav_star'>
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<button type="button icon_button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 					<span class="sr-only">Toggle Navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>

@@ -5,11 +5,16 @@
 	.center_it{
 		text-align: center;
 	}
+/*	.bordered_out{
+		border: 2px #2F343B solid; 
+		border-radius: 25px;
+
+	}*/
 </style>
 	<h2>Projects</h2>
 	<hr/>
 	@foreach ($project as $pro)
-		<div class = "col-lg-4 col-md-4 col-sm-6 col-xs-12">
+		<div class = "col-lg-4 col-md-4 col-sm-6 col-xs-12 project_div">
 			<article>
 				<a class = "link_tag center_it" href = "/projects/{{$pro->id}}"><h2>{{$pro->title}}</h2></a>
 				<div class = "thumb_nail center_it"><a href = "/projects/{{$pro->id}}"><?= $pro->image ?></a></div>
@@ -31,5 +36,19 @@
 			</article>
 		</div>
 	@endforeach
+	@section('footer')
+	<script>
+		$(document).ready(function(){
+			$('.project_div').hover(function(){
+				console.log('in')
+				$(this).addClass('bordered_out')
+			}, function(){
+				console.log('out')
+				$(this).removeClass('bordered_out')
+			})
+			console.log('working')
+		})
 
+	</script>
+	@endsection
 @stop
