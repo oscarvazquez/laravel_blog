@@ -6,7 +6,7 @@
 ?>
 <style type="text/css">
 	p {
-		font-size: 24px;
+		font-size: 24px !important;
 	}
 	.body{
 		    text-align: justify;
