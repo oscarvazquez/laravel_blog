@@ -70,25 +70,14 @@
 			</div>
 		</div>
 	</div>
-	<div class = "col-lg-12 col-md-12 col-sm-12 socials">
+<!-- 	<div class = "col-lg-12 col-md-12 col-sm-12 socials">
 		<a href="https://github.com/oscarvazquez" class = "some_some"><span class="fa fa-github fa-5x"></span></a>
 		<a href = "https://www.linkedin.com/in/oscar-vazquez-1baaa980" class = "some_some"><span class = "fa fa-linkedin fa-5x"></span></a>
 	  	<a href="https://github.com/oscarvazquez" class = "some_some"><span class="fa fa-facebook fa-5x"></span></a>
 	</div>
+ -->
 
-
-<!-- 	<div class = "scrollblock" id = "intro2">
-		<div class = "col-lg-12 welcome full_length">
-			<h1 id = 'title2'>this is the second title</h1>
-		</div>
-	</div>
-	<div class = "scrollblock welcome" id = "intro3">
-		<div class = "col-lg-5 col-lg-offset-3 welcome">
-			<h1 id = "title3">This is title three</h1>
-		</div>
-	</div> -->
-<!-- </div>
- -->@endsection
+@endsection
 
 @section('footer')
 <script>	
