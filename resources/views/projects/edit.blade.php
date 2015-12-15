@@ -51,6 +51,13 @@
 	        	height: 400,
 	        	uiColor: '#343B3D'
 	        })
+	        CKEDITOR.replace( 'story',
+	        {
+	        	customConfig : 'config.js',
+	        	toolbar : 'simple',
+	        	height: 400,
+	        	uiColor: '#343B3D'
+	        })
 		</script>
 	@endsection
 @stop
