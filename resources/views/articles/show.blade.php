@@ -25,7 +25,7 @@
 			<hr/>
 				<article>
 					<p>{{$article->published_at->format('Y-m-d')}}</p>
-					<div class = "body"><?= $art ?></div>
+					<div class = "body"><?= $article->body ?></div>
 				</article>
 			@unless ($article->categories->isEmpty())
 				<h5>Category</h5>

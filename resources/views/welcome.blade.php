@@ -6,8 +6,11 @@
 	.welcome{
 		text-align: center;
 		color: white;
+		bottom: 0 !important;
+		float: bottom !important;
 	}
 	#awesome_developer{
+	  margin-top: 60px;
 	  position: fixed; 
 	  top: 0; 
 	  left: 0; 
@@ -22,7 +25,7 @@
 	}
 	#title1{
 		margin-top: 30px;
-		font-size: 60px;
+		font-size: 40px;
 	}
 	#quote{
 		font-size: 23px;
@@ -43,7 +46,7 @@
 		color: white !important;
 	}
 	.welcome{
-		background-color: rgba(0, 0, 0, 0.2);
+		background-color: rgba(0, 0, 0, 0.5);
 		border-radius: 25px;
 	}
 	.some_some{
@@ -58,9 +61,13 @@
 		right: 0 !important;
 		bottom: 0px;
 	}
+	@media (max-width: 600px) {
+		#awesome_developer{
+			visibility: hidden;
+		}
+	}
 </style>
-<!-- <div class = "container">
- -->	<img src="{{asset('images/background.png')}}" alt="awesome developer" id="awesome_developer" />
+	<img src="{{asset('images/hilarious.png')}}" alt="awesome developer" id="awesome_developer" />
 	<div class = "scrollblock" id = "intro1">
 		<div class = "row">
 			<div class = "col-lg-7 col-lg-offset-2 welcome">

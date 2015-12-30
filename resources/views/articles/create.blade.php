@@ -24,12 +24,12 @@
 			<label><h3>Published On:</h3></label>
 				<input type = "date" name = "published_at" value = "{{Carbon\Carbon::now()->format('Y-m-d')}}" class = "form-control">
 		</div>
-		<div class = "form-group">
+		<div>
 			<label><h3>Categories:</h3></label>
 				<select multiple name = 'cats[]' class = "form-control" id = "select_field">
-					@foreach ($category as $key => $cats)
-							<option value = "{{$key}}">{{$cats}}</option>
-					@endforeach
+					<% @treatments.each do |treat| %>
+							<option value = "<%= treat.id %>"><%=treat.treatment %></option>
+					<% end %>
 				</select>
 		</div>
 		<div class = 'form-group'>
