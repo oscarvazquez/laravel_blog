@@ -5,7 +5,7 @@
 	<div class = "row">
 		<div class = "col-lg-8 col-lg-offset-3">
 			<form action = "/messages" method = "post" class="form-horizontal">
-				<input type="hidden" name="_token" value="{{ csrf_token() }}">
+				<input type="hidden" name="_token" value="<?= csrf_token(); ?>">
 				<div class="row">
 					<h1>contact</h1>
 				    <div class="form-group col-sm-5">
