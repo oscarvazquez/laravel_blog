@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://www.oscar.tech/</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.oscar.tech/articles</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.oscar.tech/projects</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.oscar.tech/contact</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.oscar.tech/auth/login</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.oscar.tech/category/javascript</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.oscar.tech/category/php</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.oscar.tech/category/ruby</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.oscar.tech/category/HTML%20&amp;%20CSS</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.oscar.tech/category/Personal</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.oscar.tech/articles/5</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.oscar.tech/articles/4</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.oscar.tech/articles/2</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.oscar.tech/articles/3</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.oscar.tech/articles/1</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.oscar.tech/projects/1</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.oscar.tech/projects/3</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.oscar.tech/password/email</loc>
+  <changefreq>monthly</changefreq>
+</url>
+</urlset>
