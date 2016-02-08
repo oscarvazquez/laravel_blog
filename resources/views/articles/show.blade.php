@@ -44,6 +44,7 @@
 @section('footer')
 <script>
 $(document).ready(function(){
+	$("pre").addClass('prettyprint')
 	var body = $('.body').html();
 	// $('.body').html(body);
 	console.log(body);
